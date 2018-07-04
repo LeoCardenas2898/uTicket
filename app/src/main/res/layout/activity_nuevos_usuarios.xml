@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".NuevosUsuarios">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            V<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_bold"
+            android:layout_marginTop="15dp"
+            android:text="Bienvenido nuevo usuario!"
+            android:textAlignment="center"
+            android:textColor="@color/primaryText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans"
+                android:layout_marginTop="10dp"
+                android:text="Indique su carrera:"
+                android:textAlignment="center"
+                android:textColor="@color/primaryText" />
+
+            <RadioGroup
+                android:id="@+id/opcionesregistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sistemas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="true"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Ing. de Sistemas" />
+
+                <RadioButton
+                    android:id="@+id/ambiental"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Ing. Ambiental" />
+
+                <RadioButton
+                    android:id="@+id/electrónica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Ing. Electrónica" />
+
+                <RadioButton
+                    android:id="@+id/mecanica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Ing. Mecánica" />
+
+                <RadioButton
+                    android:id="@+id/administracion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="Administración" />
+
+            </RadioGroup>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <EditText
+                            android:id="@+id/codigo"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/noto_sans"
+                            android:hint="Código de estudiante"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textAlignment="textStart" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/datos"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans"
+                            android:hint="Nombres y Apellidos"
+                            android:singleLine="true"
+                            android:textAlignment="textStart" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans"
+                            android:hint="Correo electrónico"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textAlignment="textStart" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:passwordToggleEnabled="true">
+
+                        <EditText
+                            android:id="@+id/contraseña"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/noto_sans"
+                            android:hint="Contraseña"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
+                            android:textAlignment="textStart" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:passwordToggleEnabled="true">
+
+                        <EditText
+                            android:id="@+id/confirmar"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/noto_sans"
+                            android:hint="Confirmar contraseña"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
+                            android:textAlignment="textStart" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/finalizar"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/estilorojo"
+                android:fontFamily="@font/noto_sans"
+                android:text="Siguiente"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

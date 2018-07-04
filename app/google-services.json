@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "977074918593",
+    "firebase_url": "https://uticket-beta.firebaseio.com",
+    "project_id": "uticket-beta",
+    "storage_bucket": "uticket-beta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977074918593:android:6d21eecab78b815f",
+        "android_client_info": {
+          "package_name": "com.uapps.uticket.untels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977074918593-g2bqjchv0ag77lu5epiofmp1b2d4aum0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uapps.uticket.untels",
+            "certificate_hash": "fea085c291a17ce7e0ab70afba724cff2ea5b35f"
+          }
+        },
+        {
+          "client_id": "977074918593-b8ctoo5cb42bnusn4i884ea3gnk8doam.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "977074918593-b8ctoo5cb42bnusn4i884ea3gnk8doam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg2bHSrTZpUSKhEdzUbYWwAMNtwTg1sFM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977074918593-b8ctoo5cb42bnusn4i884ea3gnk8doam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondoinicio"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitEnd"
+        android:layout_above="@+id/cardview"
+        android:src="@drawable/untels" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="#b0ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/estiloredondeado2"
+                android:drawableStart="@drawable/email"
+                android:fontFamily="@font/noto_sans"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/contraseña"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/estiloredondeado2"
+                android:drawableStart="@drawable/password"
+                android:fontFamily="@font/noto_sans"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:textAlignment="center" />
+
+
+            <Button
+                android:id="@+id/ingresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/estiloredondeado"
+                android:fontFamily="@font/noto_sans_bold"
+                android:text="Ingresar" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/noto_sans"
+            android:text="¿Nuevo usuario?"
+            android:textColor="@color/colorText"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/nuevousuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/noto_sans"
+            android:text=" Registrese aquí!"
+            android:textColor="@color/colorText"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
