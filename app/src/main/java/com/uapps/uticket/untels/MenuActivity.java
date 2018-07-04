@@ -38,7 +38,7 @@ public class MenuActivity extends AppCompatActivity
     private DatabaseReference databaseReference;
     private ValueEventListener valueEventListener;
     private String keyuid;
-    private TextView nombreUsuario, emailUsuario, a1, a2;
+    private TextView nombreUsuario, emailUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +52,6 @@ public class MenuActivity extends AppCompatActivity
         View hView = navigationView.getHeaderView(0);
         nombreUsuario = hView.findViewById(R.id.nombreUsuario);
         emailUsuario = hView.findViewById(R.id.emailUsuario);
-        a1 = findViewById(R.id.a123);
-        a2 = findViewById(R.id.a1234);
-
         navigationView.setNavigationItemSelectedListener(this);
 
         FirebaseUser User = FirebaseAuth.getInstance().getCurrentUser();
@@ -136,21 +133,11 @@ public class MenuActivity extends AppCompatActivity
         switch (itemId){
             case R.id.inicio:
                 fragment = new InicioFragment();
-                if(fragment != null){
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.inicioActivity, fragment);
-                    fragmentTransaction.commit();
-                }
                 break;
             case R.id.datosUser:
                 break;
             case R.id.menuUser:
                 fragment = new MenuDay();
-                if(fragment != null){
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.contenidoMenu, fragment);
-                    fragmentTransaction.commit();
-                }
                 break;
             case R.id.whatsapp:
                 try{
@@ -173,7 +160,11 @@ public class MenuActivity extends AppCompatActivity
                 break;
         }
 
-
+        if(fragment != null){
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.contenidoMenu, fragment);
+            fragmentTransaction.commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -10,16 +10,8 @@
     tools:showIn="@layout/app_bar_menu">
 
     <FrameLayout
-        android:id="@+id/inicioActivity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
-
-    <FrameLayout
         android:id="@+id/contenidoMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-
 
 </RelativeLayout>
